@@ -1,28 +1,20 @@
 {
-	"manifest_version": 2,
-	"name": "Mouse Coordinates",
-	"version": "0.1",
-		"permissions": [
-   		"storage"
-    ],
-	"background": {
-		"page": "background.html",
-		"persistant": false
-	},
-	"content_scripts": [
-		{
-			"matches": [
-				"<all_urls>"
-			],
-			"js": [
-				"jquery-2.1.4.min.js",
-				"content.js"
-			]
-		}
-	],
-	"browser_action": {
-		"default_icon": "mouse.png",
-		"default_popup": "popup.html",
-		"default_title": "Mouse Coordinates"
-	}
+    "manifest_version": 3,
+    "name": "Mouse Coordinates",
+    "version": "0.2",
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "content.js"
+        ]
+    }],
+    "content_security_policy": {
+
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "mouse.png"
+    }
 }
